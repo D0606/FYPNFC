@@ -14,7 +14,7 @@
     <string name="txtTextSettingsTitle">SETTINGS SCREEN</string>
     <string name="txtTextReadTagTitle">READ TAG SUCCESS</string>
     <string name="txtTextWriteSucceessTitle">WRITE SUCCESSFUL</string>
-    <string name="txtTextWriteFailedTitle">WRITE FAILED</string>
+    <string name="txtTextWriteFailTitle">WRITE FAILED</string>
     <string name="txtTextWriterTitle">TAG WRITER</string>
     <string name="txtTextHintTagWriter">Write Tag Label Here</string>
 </resources>
