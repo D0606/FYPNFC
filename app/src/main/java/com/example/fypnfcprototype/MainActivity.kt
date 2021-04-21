@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startReadScreen(){
-        val readIntent = Intent(this, ReadActivity::class.java)
+        val readIntent = Intent(this, ReadResultActivity::class.java)
         startActivity(readIntent)
     }
 
