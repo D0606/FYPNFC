@@ -10,6 +10,7 @@ import android.nfc.NfcAdapter
 import android.nfc.Tag
 import android.nfc.tech.Ndef
 import android.nfc.tech.NdefFormatable
+import android.util.Log
 import java.io.IOException
 
 
@@ -17,22 +18,23 @@ object NFCServices {
 
     fun getNFCRecord(intent: Intent?): String {
         intent?.let {
-            if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action) {
+            if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action || NfcAdapter.ACTION_TECH_DISCOVERED == intent.action) {
                 val nDefData = getNDefData(intent)
                 nDefData[0].records?.let {
                     it.forEach {
                         it?.payload.let {
                             it?.let {
+                                Log.d("RETURN IT", String(it))
                                 return String(it)
                             }
                         }
                     }
                 }
             } else {
-                return "Touch tag for label 1."
+                return "Touch tag for label."
             }
         }
-        return "Touch tag for label 2."
+        return "Touch tag for label."
     }
 
     fun newNFCRecord(payload: String, intent: Intent?): Boolean {

@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/buttonHomeToSettings"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="100dp"
         android:layout_marginBottom="48dp"
         android:text="@string/txtBtnSettings"
@@ -21,7 +21,7 @@
 
     <Button
         android:id="@+id/buttonHomeReadTag"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="100dp"
         android:text="@string/txtBtnReadTag"
         android:textSize="28sp"
@@ -34,7 +34,7 @@
 
     <Button
         android:id="@+id/buttonHomeWriteTag"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="100dp"
         android:layout_marginTop="48dp"
         android:text="@string/txtBtnWriteTag"

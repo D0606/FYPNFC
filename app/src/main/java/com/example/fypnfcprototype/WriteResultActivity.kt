@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.nfc.NfcAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_write_result.*
 
@@ -73,7 +74,9 @@ class WriteResultActivity : AppCompatActivity() {
     }
 
     private fun getTagText() :String {
-        return intent.getStringExtra("EXTRA_tagText").toString()
+        val text = intent.getStringExtra("EXTRA_tagText").toString()
+        Log.d("TAG TEXT", text)
+        return text
     }
 
 }

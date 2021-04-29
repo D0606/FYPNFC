@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/buttonWriteSuccessToHome"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="100dp"
         android:layout_marginBottom="48dp"
         android:text="@string/txtBtnHome"
@@ -21,7 +21,7 @@
 
     <Button
         android:id="@+id/buttonWriteSuccessNew"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="100dp"
         android:text="@string/txtBtnWriteNew"
         android:textSize="28sp"

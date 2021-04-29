@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/buttonSettingsToHome"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="100dp"
         android:layout_marginBottom="48dp"
         android:text="@string/txtBtnHome"
@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/buttonSettingsCycle"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="100dp"
         android:text="@string/txtBtnCycle"
         android:textSize="28sp"

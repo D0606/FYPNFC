@@ -2,12 +2,11 @@ package com.example.fypnfcprototype
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_write.*
+import java.util.*
 
 class WriteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +41,7 @@ class WriteActivity : AppCompatActivity() {
 
     private fun writeTag(){
         val writeTagText = Intent(this, WriteResultActivity::class.java)
-        val tagText = textTagInput.text.toString()
+        val tagText = textTagInput.text.toString().toUpperCase(Locale.getDefault())
         if (textTagInput.text.toString().isNotEmpty()) {
             writeTagText.putExtra("EXTRA_tagText", tagText)
             startActivity(writeTagText)

@@ -8,28 +8,16 @@
 
     <Button
         android:id="@+id/buttonReadToHome"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginTop="32dp"
         android:text="@string/txtBtnHome"
         android:textSize="28sp"
         app:cornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonReadAgain"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:strokeWidth="5dp" />
-
-    <Button
-        android:id="@+id/buttonReadAgain"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:text="@string/txtBtnReadAgain"
-        android:textSize="28sp"
-        app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textReadTagTitle"
         app:strokeWidth="5dp" />
 
     <TextView
@@ -38,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/txtTextReadTagTitle"
+        android:textAlignment="center"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

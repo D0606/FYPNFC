@@ -2,10 +2,10 @@ package com.example.fypnfcprototype
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.nfc.NfcAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_read_result.*
 
@@ -33,7 +33,7 @@ class ReadResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_read_result)
         supportActionBar?.hide()
         buttonReadToHome.setOnClickListener{ goHome() }
-        buttonReadAgain.setOnClickListener{ readTag() }
+        Log.d("ACTION?", intent?.action.toString())
         NFCAdapt = NfcAdapter.getDefaultAdapter(this)
         //TODO: Change this from toast to actual text screen output
         val message = NFCServices.getNFCRecord(this.intent)
@@ -43,6 +43,7 @@ class ReadResultActivity : AppCompatActivity() {
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
+        Log.d("ACTION?", intent?.action.toString())
         NFCAdapt = NfcAdapter.getDefaultAdapter(this)
         val message = NFCServices.getNFCRecord(this.intent)
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
@@ -69,7 +70,4 @@ class ReadResultActivity : AppCompatActivity() {
         startActivity(homeIntent)
     }
 
-    private fun readTag(){
-        recreate()
-    }
 }
