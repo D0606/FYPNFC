@@ -1,0 +1,121 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.yellowOnBlue" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/yellow</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/yellow</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customise your theme here.  -->
+        <item name="android:background">@color/blue</item>
+        <item name="android:backgroundTint">@color/blue</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:editTextColor">@color/yellow</item>
+        <item name="android:textColorHint">@color/yellow</item>
+        <item name="strokeColor">@color/yellow</item>
+        <item name="boxStrokeColor">@color/yellow</item>
+        <item name="hintTextAppearance">@color/yellow</item>
+    </style>
+    <style name="Theme.blueOnYellow" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorOnPrimary">@color/blue</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/yellow</item>
+        <item name="colorSecondaryVariant">@color/yellow</item>
+        <item name="colorOnSecondary">@color/blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customise your theme here.  -->
+        <item name="android:background">@color/yellow</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textColorHint">@color/blue</item>
+        <item name="strokeColor">@color/blue</item>
+        <item name="boxStrokeColor">@color/blue</item>
+    </style>
+    <style name="Theme.yellowOnBlack" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/yellow</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/yellow</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customise your theme here.  -->
+        <item name="android:background">@color/black</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textColorHint">@color/yellow</item>
+        <item name="strokeColor">@color/yellow</item>
+        <item name="boxStrokeColor">@color/yellow</item>
+    </style>
+    <style name="Theme.blackOnYellow" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/yellow</item>
+        <item name="colorSecondaryVariant">@color/yellow</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customise your theme here.  -->
+        <item name="android:background">@color/yellow</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="boxStrokeColor">@color/black</item>
+    </style>
+    <style name="Theme.greenOnBlack" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/green</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/green</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customise your theme here.  -->
+        <item name="android:background">@color/black</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textColorHint">@color/green</item>
+        <item name="strokeColor">@color/green</item>
+        <item name="boxStrokeColor">@color/green</item>
+    </style>
+    <style name="Theme.whiteOnBlack" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customise your theme here.  -->
+        <item name="android:background">@color/black</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="boxStrokeColor">@color/white</item>
+    </style>
+</resources>
