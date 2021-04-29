@@ -26,14 +26,14 @@
                     android:scheme="vnd.android.nfc" />
             </intent-filter>
         </activity>
-        <activity android:name=".WriteResultActivity">
+        <activity android:name=".WriteResultActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".MainActivity" />
 
     </application>
 

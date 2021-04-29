@@ -29,10 +29,10 @@ object NFCServices {
                     }
                 }
             } else {
-                return "Touch tag for label."
+                return "Touch tag for label 1."
             }
         }
-        return "Touch tag for label."
+        return "Touch tag for label 2."
     }
 
     fun newNFCRecord(payload: String, intent: Intent?): Boolean {
@@ -114,7 +114,6 @@ object NFCServices {
                 Intent(activity, classType).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0)
         val nfcIntentFilter = IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED)
         val filterArr = arrayOf(nfcIntentFilter)
-
         val techArr = arrayOf(arrayOf(Ndef::class.java.name), arrayOf(NdefFormatable::class.java.name))
 
         nfcAdapter.enableForegroundDispatch(activity, pendingIntent, filterArr, techArr)

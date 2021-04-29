@@ -1,6 +1,8 @@
 package com.example.fypnfcprototype
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.nfc.NfcAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,11 +14,27 @@ private var NFCAdapt: NfcAdapter? = null
 class WriteResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        /*Get the theme key*/
+        sharedPreferences = getSharedPreferences(
+                "colourChoice",
+                Context.MODE_PRIVATE
+        )
+        /*Check the theme now*/
+        when (sharedPreferences.getString(colourKey, "yellowOnBlue")) {
+            "yellowOnBlue" -> this.setTheme(R.style.Theme_yellowOnBlue)
+            "blueOnYellow" -> this.setTheme(R.style.Theme_blueOnYellow)
+            "yellowOnBlack" -> this.setTheme(R.style.Theme_yellowOnBlack)
+            "blackOnYellow" -> this.setTheme(R.style.Theme_blackOnYellow)
+            "greenOnBlack" -> this.setTheme(R.style.Theme_greenOnBlack)
+            "whiteOnBlack" -> this.setTheme(R.style.Theme_whiteOnBlack)
+        }
+
         setContentView(R.layout.activity_write_result)
+        supportActionBar?.hide()
         NFCAdapt = NfcAdapter.getDefaultAdapter(this)
         buttonWriteSuccessToHome.setOnClickListener{ goHome() }
         buttonWriteSuccessNew.setOnClickListener{ goWrite() }
-        buttonWriteAgainSuccess.setOnClickListener { writeAgain() }
     }
 
     override fun onNewIntent(intent: Intent?) {
@@ -52,10 +70,6 @@ class WriteResultActivity : AppCompatActivity() {
     private fun goWrite(){
         val writeIntent = Intent(this, WriteActivity::class.java)
         startActivity(writeIntent)
-    }
-
-    private fun writeAgain(){
-        recreate()
     }
 
     private fun getTagText() :String {

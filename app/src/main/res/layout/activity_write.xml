@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
     tools:context=".WriteActivity">
 
     <Button
@@ -12,16 +11,13 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginBottom="48dp"
-        android:backgroundTint="@color/blue"
         android:text="@string/txtBtnHome"
-        android:textColor="@color/yellow"
         android:textSize="28sp"
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toTopOf="@+id/textTagInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/yellow"
         app:strokeWidth="5dp" />
 
     <Button
@@ -29,15 +25,12 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="48dp"
-        android:backgroundTint="@color/blue"
         android:text="@string/txtBtnWriteNow"
-        android:textColor="@color/yellow"
         android:textSize="28sp"
         app:cornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTagInputLayout"
-        app:strokeColor="@color/yellow"
         app:strokeWidth="5dp" />
 
     <TextView
@@ -46,7 +39,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/txtTextWriterTitle"
-        android:textColor="@color/yellow"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,13 +51,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:textColorHint="@color/yellow"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="25dp"
         app:boxCornerRadiusBottomStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:boxCornerRadiusTopStart="25dp"
-        app:boxStrokeColor="@color/yellow"
         app:boxStrokeWidth="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,9 +67,7 @@
             android:id="@+id/textTagInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/blue"
             android:hint="@string/txtTextHintTagWriter"
-            android:textColor="@color/yellow"
             android:textSize="36sp"
             app:layout_constraintTop_toTopOf="@+id/textInputLayout"
             tools:layout_editor_absoluteX="2dp" />

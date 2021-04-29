@@ -13,8 +13,7 @@
     <string name="txtTextHomeTitle">HOME SCREEN</string>
     <string name="txtTextSettingsTitle">SETTINGS SCREEN</string>
     <string name="txtTextReadTagTitle">READ TAG</string>
-    <string name="txtTextWriteSuccessTitle">WRITE SUCCESSFUL</string>
-    <string name="txtTextWriteFailTitle">WRITE FAILED</string>
+    <string name="txtTextWriteResultTitle">WRITE STATUS</string>
     <string name="txtTextWriterTitle">TAG WRITER</string>
     <string name="txtTextHintTagWriter">Write Tag Label Here</string>
 </resources>
