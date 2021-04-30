@@ -31,10 +31,10 @@ object NFCServices {
                     }
                 }
             } else {
-                return "Touch tag for label."
+                return "TOUCH TAG TO READ"
             }
         }
-        return "Touch tag for label."
+        return "TOUCH TAG TO READ"
     }
 
     fun newNFCRecord(payload: String, intent: Intent?): Boolean {

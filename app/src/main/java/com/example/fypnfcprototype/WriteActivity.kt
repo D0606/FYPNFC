@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_write.*
 import java.util.*
@@ -11,6 +12,7 @@ import java.util.*
 class WriteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         /*Get the theme key*/
         sharedPreferences = getSharedPreferences(
@@ -26,6 +28,9 @@ class WriteActivity : AppCompatActivity() {
             "greenOnBlack" -> this.setTheme(R.style.Theme_greenOnBlack)
             "whiteOnBlack" -> this.setTheme(R.style.Theme_whiteOnBlack)
         }
+
+        //Clear tag value
+        sharedPreferences.edit().putString("tagText", "null").apply()
 
         setContentView(R.layout.activity_write)
         supportActionBar?.hide()
@@ -43,12 +48,14 @@ class WriteActivity : AppCompatActivity() {
         val writeTagText = Intent(this, WriteResultActivity::class.java)
         val tagText = textTagInput.text.toString().toUpperCase(Locale.getDefault())
         if (textTagInput.text.toString().isNotEmpty()) {
-            writeTagText.putExtra("EXTRA_tagText", tagText)
+            sharedPreferences.edit().putString("tagText", tagText).apply()
+            Log.d("TEXT WRITTEN", tagText)
             startActivity(writeTagText)
         }
         else {
             //TODO: Change toasts to dialogs or titles
-            Toast.makeText(this, "Error: No text.", Toast.LENGTH_SHORT).show()
+            textWriteTagScreen.text = "PLEASE ENTER LABEL TEXT"
+            Toast.makeText(this, "NO LABEL TEXT ENTERED.", Toast.LENGTH_SHORT).show()
         }
 
     }

@@ -1,5 +1,6 @@
 package com.example.fypnfcprototype
 
+import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.nfc.NfcAdapter
@@ -8,10 +9,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_read_result.*
+import kotlinx.android.synthetic.main.activity_write_result.*
 
-private var NFCAdapt: NfcAdapter? = null
 
 class ReadResultActivity : AppCompatActivity() {
+
+    private var NFCAdapt : NfcAdapter? = null
+    private var NFCIntent: PendingIntent? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,36 +37,44 @@ class ReadResultActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_read_result)
         supportActionBar?.hide()
+
+        val checkAdapter = NfcAdapter.getDefaultAdapter(this).isEnabled
+        if (!checkAdapter) {
+            Toast.makeText(this, "NO NFC. PLEASE ENABLE", Toast.LENGTH_SHORT).show()
+            textReadTagTitle.text = "PLEASE ENABLE NFC"
+        }
         buttonReadToHome.setOnClickListener{ goHome() }
-        Log.d("ACTION?", intent?.action.toString())
+
         NFCAdapt = NfcAdapter.getDefaultAdapter(this)
-        //TODO: Change this from toast to actual text screen output
-        val message = NFCServices.getNFCRecord(this.intent)
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-        textReadTagTitle.text = message
+        NFCIntent = PendingIntent.getActivity(this, 0,
+                Intent(this, javaClass).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0)
+        Log.d("ACTION?", intent?.action.toString())
+        if (intent != null) {
+            readTag(intent)
+        }
     }
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         Log.d("ACTION?", intent?.action.toString())
-        NFCAdapt = NfcAdapter.getDefaultAdapter(this)
-        val message = NFCServices.getNFCRecord(this.intent)
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-        textReadTagTitle.text = message
+        if (intent != null) {
+            readTag(intent)
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        NFCAdapt?.let {
-            NFCServices.foregroundNFCOn(it, this, javaClass)
+        val checkAdapter = NfcAdapter.getDefaultAdapter(this).isEnabled
+        if (!checkAdapter) {
+            Toast.makeText(this, "NO NFC. PLEASE ENABLE", Toast.LENGTH_SHORT).show()
+            textReadTagTitle.text = "PLEASE ENABLE NFC"
         }
+        NFCAdapt?.enableForegroundDispatch(this, NFCIntent, null, null)
     }
 
     override fun onPause() {
         super.onPause()
-        NFCAdapt?.let {
-            NFCServices.foregroundNFCOff(it, this)
-        }
+        NFCAdapt?.disableForegroundDispatch(this)
     }
 
     private fun goHome(){
@@ -70,4 +83,8 @@ class ReadResultActivity : AppCompatActivity() {
         startActivity(homeIntent)
     }
 
+    private fun readTag(processIntent: Intent){
+        val message = NFCServices.getNFCRecord(processIntent)
+        textReadTagTitle.text = message
+    }
 }

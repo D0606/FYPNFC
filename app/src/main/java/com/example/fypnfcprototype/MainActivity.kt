@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         buttonHomeToSettings.setOnClickListener{ startSettingsScreen() }
         buttonHomeReadTag.setOnClickListener{ startReadScreen() }
         buttonHomeWriteTag.setOnClickListener { startWriteScreen() }
+
+
     }
 
 
