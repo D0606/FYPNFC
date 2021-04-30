@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_read_result.*
-import kotlinx.android.synthetic.main.activity_write_result.*
 
 
 class ReadResultActivity : AppCompatActivity() {

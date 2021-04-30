@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             "greenOnBlack" -> this.setTheme(R.style.Theme_greenOnBlack)
             "whiteOnBlack" -> this.setTheme(R.style.Theme_whiteOnBlack)
         }
-
+        title = ""
         setContentView(R.layout.activity_main)
         buttonHomeToSettings.setOnClickListener{ startSettingsScreen() }
         buttonHomeReadTag.setOnClickListener{ startReadScreen() }
